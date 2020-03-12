@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+
+<script>
+  var xhr = new XMLHttpRequest();
+xhr.open('GET', '/cate.json',  true) 
+xhr.send()
+xhr.addEvenListener(“load", function(){
+	console.log(xhr.status)
+	if((xhr.status >= 200 && xhr.status <= 300) || xhr.status === 304){
+		console.log(xhr.responseText)
+	}else{
+		console.log(“error”)
+	}
+})
+</script>
+  
+</body>
+</html>
