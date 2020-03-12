@@ -11,7 +11,7 @@
   var xhr = new XMLHttpRequest();
 xhr.open('GET', '/Text_Ajax/cate.json',  true) 
 xhr.send()
-xhr.addEvenListener("load", function(){
+xhr.addEventListener("load", function(){
 	console.log(xhr.status)
 	if((xhr.status >= 200 && xhr.status <= 300) || xhr.status === 304){
 		console.log(xhr.responseText)
